@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /*localizado no site googlefonts e colocado o link como "@importar" sem o style e a primeira font-family para todo o projeto ser nessa fonte*/ 
+    background-size: ;
+}
+body {
+    display: flex;
+    justify-content: center; /*colocar no centro*/
+    align-items: center; /*alinhar no centro*/ 
+    min-height: 100vh; /*para alinhar no mínimo a tela toda*/
+    background-image: url(fundo.jpg);
+    background-clip: cover; /*para esticar a tela toda*/
+    background-position: center;
+}
+.container { /*tag man (recipiente) ou seja o form.*/ 
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 2s55, 255, .2); /*cor da borda*/
+    border-radius: 10px;  /*para ficar mais arredondado*/
+    color: white;
+    padding: 30px /*cima em baixo*/ 40px /*dos lados*/; /*preenchimento*/
+    box-shadow: 10px 5px 5px black; /*tipos de bordas encontradas na internet pelo nome box shadow css*/
+    backdrop-filter: blur(50px); /*fundo transparente ou fosco*/
+}
+.container h1 {  /*arrumar o h1*/
+    font-size: 36px;
+    text-align: center; /*alinhar o texto*/
+}
+.input-box { /*parte do usuário e senha*/
+    position: relative; /*para facilitar*/
+    width: 100%; /*para ocupar o máximo de espaço possível*/
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box input { /*mexe apenas no input do input-box*/
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2); /* "none" não vai ter borda*/
+    border-radius: 40px;
+    outline: none; /*é a linha quando clicamos para colocar o email ou senha*/
+    font-size: 16px;
+    color: white;
+    padding: 20px 45px 20px 20px; /*cima, baixo, esqueda, direita*/
+}
+.input-box input input::placeholder { /*mudar dentro*/
+    color: rgb(235, 216, 216);
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px; /*quer que ele vai para direita e volte*/
+    top: 50px; /*para quando clicarmos, começa do meio*/
+    font-size: 20px;
+    transform: translateY(-50%); /*para centralizar*/
+}
+.remember-forgot {  /*LEMBRAR MINHA SENHA*/
+    display: flex;
+    justify-content: space-between; /*space-between joga cada um para um lado*/
+    margin: -15px 0 15px; /*para separar um pouco*/
+}
+
+
+/*
+margin & padding
+
+1 valor -margin: 20px - Todos os lados
+2 valores - margin: 20px - EM cima e embaixo, dos lados
+3 valores - padding: 20px 10px 30px - Em cima, dos lados, em baixo
+4 valores - margin: 10px 30px 12px 33px - em cima, direita, embaixo, esquerda
+*/
+
+.remember-forgot label input {
+    accent-color: white; /*parte azul quando clicamos em lembrar senha*/
+    margin-right: 5px; /* para não grudar o azul no campo*/
+}
+
+.remember-forgot a { /*LINK*/
+    text-decoration: none; /* para sumir a linha em baixo*/
+    color: white;
+}
+
+.remember-forgot a:hover { /*para quando passar o mouse no link aparecer o underline*/
+    text-decoration: underline;
+}
+
+.login {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer; /*para ficar a mão quando colocamos o mouse em cima*/
+    font-size: 16px;
+    color: #333;
+    font-weight: 600; /*para o texto ficar um pouco maior*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+}
+
+.login:hover {
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: white;
+    transition: 0.5s; /*para quando colocarmos o mouse mudar devagar*/
+}
+
+.register-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

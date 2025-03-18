@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="designer_portifolio.css">
+    <title>Meu Portifólio</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="fotoperfil.jpg" alt="Fotos da Bruna" class="foto-perfil">
+        <h1>Bruna Souza</h1>
+        <p class="cabecalho-sub-titulo">Futura Dev</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="Sobre-titulo">Sobre Mim</h2><br>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Estou começando nos estudos de programação, pretendo ser uma Dev. Realizei os cursos de Linguagem
+                de programação Python básico, HTML e no momento estou estudando JavaScript e aperfeiçoando os comandos
+                em HTML CSS e JavaScript.
+            </p>
+        </div>
+    </section>
+    <section>
+        <h2 class="projetos-titulos">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+
+            <div class="projetos-site">
+                <img src="projeto1.png" alt="projeto 1" class="projetos-imagens">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Site Login</h3>
+                    <p class="paragrafo-projetos">esse site eu realizei através de uma video-aula</p>
+                </div>
+            </div>
+
+            <div class="projetos-site">
+                <img src="projeto2.png" alt="projeto 2" class="projetos-imagens">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Índia</h3>
+                    <p class="paragrafo-projetos">esse desenho realizei através do celular pelo IbisPainter</p>
+                </div>
+            </div>
+
+            <div class="projetos-site">
+                <img src="projeto3.png" alt="projeto 3" class="projetos-imagens">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Menina Soneca</h3>
+                    <p class="paragrafo-projetos">esse desenho realizei através do celular pelo IbisPainter</p>
+                </div>
+            </div>
+
+            <div class="projetos-site">
+                <img src="projeto4.png" alt="projeto 4" class="projetos-imagens">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-projetos">Surfista</h3>
+                    <p class="paragrafo-projetos">esse desenho realizei através do celular pelo IbisPainter</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhatsApp(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows='6' id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar Whatsapp</button>
+        </form>
+    </section>
+
+    <script>
+
+        function enviarWhatsApp(event) {
+            event.preventDefault()
+        }
+
+
+        const nome = document.getElementById('nome');
+        const mensagem = document.getElementById('mensagem');
+        const telefone = '5511959613529'
+
+        const texto = `Olá, meu nome é ${nome}, ${mensagem}` /* é o texto que será enviado*/
+        const msgFormatada = encodeURIComponent(texto) /* vai corrigir os espaço para ser mandado pelo wtt*/
+
+        const url = `https://wa.me/${telefone}?t=${msgFormatada}`
+
+        window.open(url, '_blank') /* vai abrir o link na pag branca*/
+    </script>
+</body>
+
+</html>
